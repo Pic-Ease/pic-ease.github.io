@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Product Capture</title>
+    </head>
+    <body>
+
+        <div class="app">
+            <div id="pre-auth-section" style="display:none;">
+                <header>
+                  <h1>Product Capture</h1>
+                </header>
+                <p>
+                  Before you begin, please log into Dropbox and grant
+                  product-capture app permissions.
+                </p>
+                <a href="#" id="authlink" class="button">Authenticate</a>
+            </div>
+
+            <div id="authed-section" style="display:none;">
+              <header>
+                <h1>Product Capture</h1>
+              </header>
+
+              <div class="content">
+                <div class="source-container">
+                  <label for="source">Source</label>
+                  <input id="source" type="text">
+                </div>
+                <div id="results"></div>
+              </div>
+
+              <footer>
+                <button class="camera-btn" type="button">Camera</button>
+                <input id="file-input" type="file" accept="image/*, capture=camera" capture="environment">
+                <!--<button class="clear-localStorage-btn" type="button">Clear Local Storage</button>-->
+              </footer>
+
+                <!--<img id="preview">-->
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
+        <script src="https://unpkg.com/dropbox/dist/DropboxTeam-sdk.min.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/index.js?v=3"></script>
+    </body>
+</html>
+
